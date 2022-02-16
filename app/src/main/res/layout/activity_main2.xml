@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+
+<EditText
+    android:id="@+id/editTextTextPersonName"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:ems="10"
+    android:inputType="textPersonName"
+    android:text="Full Name"
+    app:layout_constraintEnd_toEndOf="@id/guideline4"
+    app:layout_constraintStart_toStartOf="@id/guideline3"
+    app:layout_constraintTop_toBottomOf="@id/guideline2"
+    app:layout_constraintBottom_toTopOf="@id/editTextTextPersonUserName"
+    tools:layout_editor_absoluteX="124dp"
+    tools:layout_editor_absoluteY="425dp" />
+
+<EditText
+    android:id="@+id/editTextTextPersonUserName"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:ems="10"
+    android:inputType="textPersonName"
+    android:text="UserName"
+    app:layout_constraintEnd_toEndOf="@id/guideline4"
+    app:layout_constraintStart_toStartOf="@id/guideline3"
+    app:layout_constraintTop_toBottomOf="@id/editTextTextPersonName"
+    app:layout_constraintBottom_toTopOf="@id/editTextTextEmailAddress"
+    tools:layout_editor_absoluteX="124dp"
+    tools:layout_editor_absoluteY="425dp" />
+
+<androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideline2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_percent="0.08" />
+
+<androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideline3"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintGuide_percent="0.08" />
+
+<androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideline4"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintGuide_percent="0.92" />
+
+<EditText
+    android:id="@+id/editTextTextEmailAddress"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toEndOf="@id/guideline4"
+    app:layout_constraintStart_toStartOf="@id/guideline3"
+    app:layout_constraintTop_toBottomOf="@id/editTextTextPersonUserName"
+    app:layout_constraintBottom_toTopOf="@id/editTextTextPersonPassword"
+    android:ems="10"
+    android:text="Email"
+    android:inputType="textEmailAddress"
+    tools:layout_editor_absoluteX="83dp"
+    tools:layout_editor_absoluteY="177dp" />
+
+<EditText
+    android:id="@+id/editTextTextPersonPassword"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:ems="10"
+    android:inputType="textPersonName"
+    android:text="Password"
+    app:layout_constraintEnd_toEndOf="@id/guideline4"
+    app:layout_constraintStart_toStartOf="@id/guideline3"
+    app:layout_constraintTop_toBottomOf="@id/editTextTextEmailAddress"
+    app:layout_constraintBottom_toTopOf="@id/editTextTextPersonReTypePassword"
+    tools:layout_editor_absoluteX="124dp"
+    tools:layout_editor_absoluteY="425dp" />
+
+<EditText
+    android:id="@+id/editTextTextPersonReTypePassword"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:ems="10"
+    android:inputType="textPersonName"
+    android:text="Re-type Password"
+    app:layout_constraintEnd_toEndOf="@id/guideline4"
+    app:layout_constraintStart_toStartOf="@id/guideline3"
+    app:layout_constraintTop_toBottomOf="@id/editTextTextPersonPassword"
+    app:layout_constraintBottom_toTopOf=""
+    tools:layout_editor_absoluteX="124dp"
+    tools:layout_editor_absoluteY="425dp" />
+
+<RadioButton
+    android:id="@+id/radioButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Female"
+    app:layout_constraintTop_toBottomOf="@id/textView"
+    app:layout_constraintStart_toEndOf="@id/guideline3"
+    tools:layout_editor_absoluteX="61dp"
+    tools:layout_editor_absoluteY="341dp" />
+
+<RadioButton
+    android:id="@+id/radioButton2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Male"
+    app:layout_constraintStart_toEndOf="@id/radioButton"
+    app:layout_constraintTop_toBottomOf="@id/textView"
+    tools:layout_editor_absoluteX="201dp"
+    tools:layout_editor_absoluteY="345dp" />
+
+<TextView
+    android:id="@+id/textView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Gender"
+    android:textSize="20dp"
+    app:layout_constraintStart_toStartOf="@id/guideline3"
+    app:layout_constraintTop_toBottomOf="@id/editTextTextPersonReTypePassword"
+    tools:layout_editor_absoluteX="84dp"
+    tools:layout_editor_absoluteY="305dp" />
+
+<com.google.android.material.button.MaterialButton
+    android:id="@+id/buttonRegister"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:text="Register"
+    app:layout_constraintStart_toEndOf="@id/guideline3"
+    app:layout_constraintEnd_toStartOf="@id/guideline4"
+    app:layout_constraintTop_toBottomOf="@id/radioButton"
+    app:layout_constraintBottom_toTopOf="@id/buttonShowInfo"
+    android:backgroundTint="@color/red"
+    android:textAllCaps="false"
+    app:cornerRadius="100dp"
+    tools:layout_editor_absoluteX="165dp"
+    tools:layout_editor_absoluteY="431dp" />
+
+<com.google.android.material.button.MaterialButton
+    android:id="@+id/buttonShowInfo"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:text="Show info"
+    app:layout_constraintStart_toEndOf="@id/guideline3"
+    app:layout_constraintEnd_toStartOf="@id/guideline4"
+    app:layout_constraintTop_toBottomOf="@id/buttonRegister"
+    android:backgroundTint="@color/purple_700"
+    android:textAllCaps="false"
+    app:cornerRadius="100dp"
+    tools:layout_editor_absoluteX="165dp"
+    tools:layout_editor_absoluteY="431dp" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="210dp"
+        tools:layout_editor_absoluteY="506dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
