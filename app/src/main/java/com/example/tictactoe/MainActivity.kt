@@ -2,6 +2,7 @@ package com.example.tictactoe
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import com.example.tictactoe.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -19,31 +20,31 @@ class MainActivity : AppCompatActivity() {
 
     fun setListener(){
         binding.button1.setOnClickListener{
-            buttonSelected(1)
+            buttonSelected(1 , binding.button1)
         }
         binding.button2.setOnClickListener {
-            buttonSelected(2)
+            buttonSelected(2, binding.button2)
         }
         binding.button3.setOnClickListener {
-            buttonSelected(3)
+            buttonSelected(3, binding.button3)
         }
         binding.button4.setOnClickListener {
-            buttonSelected(4)
+            buttonSelected(4, binding.button4)
         }
         binding.button5.setOnClickListener {
-            buttonSelected(5)
+            buttonSelected(5, binding.button5)
         }
         binding.button6.setOnClickListener {
-            buttonSelected(6)
+            buttonSelected(6, binding.button6)
         }
         binding.button7.setOnClickListener {
-            buttonSelected(7)
+            buttonSelected(7, binding.button7)
         }
         binding.button8.setOnClickListener {
-            buttonSelected(9)
+            buttonSelected(8, binding.button8)
         }
         binding.button9.setOnClickListener {
-            buttonSelected(9)
+            buttonSelected(9, binding.button9)
         }
         binding.button10.setOnClickListener{
             buttonModeArray = arrayListOf(3,3,3,3,3,3,3,3,3,3)
@@ -161,38 +162,38 @@ class MainActivity : AppCompatActivity() {
         return mode
     }
 
-    fun drawNewButton(bottunNum :Int, mode : Mode){
+    fun drawNewButton(bottunNum :Int, mode : Mode, button : Button){
             if (mode == com.example.tictactoe.Mode.circle) {
                 buttonModeArray[bottunNum] = 0
-                binding.button9.text = "O"
+                button.text = "O"
             } else if (mode == com.example.tictactoe.Mode.cross) {
                 buttonModeArray[bottunNum] = 1
-                binding.button9.text = "X"
+                button.text = "X"
             }
         }
 
     fun printRound(mode : Mode) : Mode{
         if (mode == com.example.tictactoe.Mode.circle) {
-            binding.textView2.text = "Round O"
+            binding.textView2.text = "Round X"
             return com.example.tictactoe.Mode.cross
         } else if (mode == com.example.tictactoe.Mode.cross) {
-            binding.textView2.text = "Round X"
+            binding.textView2.text = "Round O"
             return com.example.tictactoe.Mode.circle
         }
-        return com.example.tictactoe.Mode.cross
+        return com.example.tictactoe.Mode.circle
     }
 
     fun printIfPlayerWin(buttonNum: Int, mode: Mode){
             if (mode == com.example.tictactoe.Mode.cross) {
-                binding.textView2.text = "O wiiiiin"
-            } else if (mode == com.example.tictactoe.Mode.circle) {
                 binding.textView2.text = "X wiiiiin"
+            } else if (mode == com.example.tictactoe.Mode.circle) {
+                binding.textView2.text = "O wiiiiin"
             }
     }
 
-    fun buttonSelected(num : Int){
+    fun buttonSelected(num : Int, button: Button){
         if (buttonModeArray[num] == 3) {
-            drawNewButton(num, mode)
+            drawNewButton(num, mode,button)
             if(!isWin(num)){
                 mode = printRound(mode)
             }else{
